@@ -1,0 +1,18 @@
+@import url('node_modules/bootstrap/dist/css/bootstrap.min.css');
+
+*{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.main-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-body img{
+    max-width: 350px;
+}
