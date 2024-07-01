@@ -40,4 +40,53 @@
 }
 .hero-section .social-wrapper a{
     
+    width: 100vw;
+    min-height: 100vh;
+}
+
+/* text animation */
+
+
+.console-container {
+}
+
+.console-underscore {
+    display: inline-block;
+    position: relative;
+    top: -0.14em;
+    left: 10px;
+    animation: underscore 1s infinite;
+}
+
+@keyframes underscore {
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+/* social */
+
+.social-wrapepr {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.social-wrapepr a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 3px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: 0.3s all ease;
+}
+
+.social-wrapepr a img {
+    width: 32px;
+    height: 32px;
+}
+
+.social-wrapepr a:hover {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 }
