@@ -1,6 +1,24 @@
 addEventListener("load", (event) => {
   initialize();
+  if(!localStorage.getItem("kkkTheme")){
+    localStorage.setItem("kkkTheme", "dark");
+    cssColorVariableChange(themesColor.dark);
+  }else {
+    const theme = localStorage.getItem("kkkTheme");
+    if (theme === "dark") {
+      cssColorVariableChange(themesColor.dark);
+      localStorage.setItem("kkkTheme", "dark");
+      document.getElementById("themeIcon").innerHTML = '<i class="fi fi-rr-brightness"></i>';
+      profileVideoSrc('dark');
+    } else {
+      cssColorVariableChange(themesColor.light);
+      localStorage.setItem("kkkTheme", "light");
+      document.getElementById("themeIcon").innerHTML = '<i class="fi fi-rr-moon-stars"></i>';
+      profileVideoSrc('light');
+    }
+  }
 });
+
 function initialize() {
   const servicesData = [
     {
@@ -8,12 +26,6 @@ function initialize() {
       title: "Prototype to HTML with Responsive Design",
       description:
         "Seamlessly transform your design prototypes into pixel-perfect, responsive HTML code that looks stunning on any device, ensuring a smooth and engaging user experience across all platforms.",
-    },
-    {
-      image: "services/graphic-designer.gif",
-      title: "Figma Wireframes & Prototypes",
-      description:
-        "Bring your ideas to life with interactive and visually compelling prototype designs and wireframes in Figma, providing a clear and engaging blueprint of your project before development begins.",
     },
     {
       image: "services/web-developer.gif",
@@ -28,6 +40,12 @@ function initialize() {
         "Optimize your existing stylesheets with modern best practices, including design tokens and variables, to ensure a consistent, scalable, and maintainable codebase that enhances your design system's efficiency and flexibility.",
     },
     {
+      image: "services/graphic-designer.gif",
+      title: "Figma Wireframes & Prototypes",
+      description:
+        "Bring your ideas to life with interactive and visually compelling prototype designs and wireframes in Figma, providing a clear and engaging blueprint of your project before development begins.",
+    },
+    {
       image: "services/ux-design.gif",
       title: "UI/UX Design Consulting",
       description:
@@ -38,40 +56,70 @@ function initialize() {
   let servicesCardUI = "";
   servicesData.forEach(function (service, i) {
     const card = `<div class="card-wrapper"><img src="images/${servicesData[i].image}" alt="">
-          <h4>${servicesData[i].title}</h4><p>${servicesData[i].description}</p></div>`;
+          <h5>${servicesData[i].title}</h5><p>${servicesData[i].description}</p></div>`;
     servicesCardUI += card;
   });
   cardWrapper.innerHTML = servicesCardUI;
 }
+// color variable
+const themesColor = {
+  light: [
+    {name:'--fore-color',color: "#24292d"},
+    {name:'--back-color',color: "#fff"}
+  ],
+  dark: [
+    {name:'--fore-color',color: "#fff"},
+    {name:'--back-color',color: "#24292d"}
+  ]
+};
+//toggleTheme
+function toggleTheme() {
+  const theme = localStorage.getItem("kkkTheme");
+  if (theme === "dark") {
+    cssColorVariableChange(themesColor.light);
+    localStorage.setItem("kkkTheme", "light");
+    document.getElementById("themeIcon").innerHTML = '<i class="fi fi-rr-moon-stars"></i>';
+    profileVideoSrc('light');
+  } else {
+    cssColorVariableChange(themesColor.dark);
+    localStorage.setItem("kkkTheme", "dark");
+    document.getElementById("themeIcon").innerHTML = '<i class="fi fi-rr-brightness"></i>';
+    profileVideoSrc('dark');
+  }
+}
 
+function profileVideoSrc(mode) {
+  if(mode=='dark'){
+    document.getElementById("profileVideo").src = "videos/profile-video-dark.mp4";
+  }else{
+    document.getElementById("profileVideo").src = "videos/profile-video-light.mp4";
+  }
+}
+
+function cssColorVariableChange(themeColor) {
+  for (let color of themeColor) {
+    document.documentElement.style.setProperty(color.name, color.color);
+  }
+}
 // text Animation
 
 // function([string1, string2],target id,[color1,color2])
-consoleText(["Hello World.", "Console Text", "Made with Love."], "text", [
-  "tomato",
-  "rebeccapurple",
-  "lightblue",
-]);
+consoleText(["Web Developer", "Front-End Developer", "UI/UX Designer"], "text");
 
-function consoleText(words, id, colors) {
-  if (colors === undefined) colors = ["#fff"];
+function consoleText(words, id) {
   var visible = true;
   var letterCount = 1;
   var x = 1;
   var waiting = false;
   var target = document.getElementById(id);
-  target.setAttribute("style", "color:" + colors[0]);
   window.setInterval(function () {
     if (letterCount === 0 && waiting === false) {
       waiting = true;
       target.innerHTML = words[0].substring(0, letterCount);
       window.setTimeout(function () {
-        var usedColor = colors.shift();
-        colors.push(usedColor);
         var usedWord = words.shift();
         words.push(usedWord);
         x = 1;
-        target.setAttribute("style", "color:" + colors[0]);
         letterCount += x;
         waiting = false;
       }, 1000);

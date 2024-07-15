@@ -6,37 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ko Ko Kyaw</title>
 
+    <!-- <link  rel="stylesheet"href="/website/css/uicons-regular-rounded.css"> -->
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-brands/css/uicons-brands.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/card.css">
 </head>
 
 <body>
-    <div class="main-body">
-        <video class="profile-video" src="videos/EmojiMovie741032042.mov" autoplay loop muted></video>
+    <span id="themeIcon"class="theme-icon" onclick="toggleTheme()"></span>
+    <div class="primary-section flex-center">
+        <video id="profileVideo" class="profile-video" src="videos/profile_pic_light.mp4" autoplay loop muted></video>
         <div class="hero-section">
-            <span class="hello-title">Hi there! I'm <b>Ko Ko Kyaw</b></span>
-            <span class="hello-title">UI/UX Designer</span>
-            <p class="hello-text">Let's work together to create something incredible.</p>
+            <span class="hello-title"><span>Hi there! I'm </span><b><span>Ko Ko Kyaw</span></b></span>
+            <span class="hello-carrier">
+                <span id='text'></span>
+                <div class='console-underscore' id='console'>&#95;</div>
         </div>
-        <div class='console-container'><span id='text'></span>
-            <div class='console-underscore' id='console'>&#95;</div>
+        </span>
+        <p class="hello-text">Let's work together to create something incredible.</p>
+        <div class="social-wrapepr">
+            <a href="https://www.facebook.com/264.jolly/" target="_blank">
+                <img src="images/icons/facebook.svg" alt="">
+                <!-- <i class="fi fi-brands-facebook"></i> -->
+            </a>
+            <a href="" target="_blank">
+                <img src="images/icons/mail.svg" alt="">
+                <!-- <i class="fi fi-rr-envelope"></i> -->
+            </a>
+            <a href="" target="_blank">
+                <img src="images/icons/linkedin.svg" alt="">
+                <!-- <i class="fi fi-brands-linkedin"></i> -->
+            </a>
+            <a href="" target="_blank">
+                <img src="images/icons/dribbble.svg" alt="">
+                <!-- <i class="fi fi-brands-dribbble"></i> -->
+            </a>
         </div>
-        <div class="social-wrapepr" style="display: flex; justify-content: center;">
-            <a href="www.facebook.com">
-                <img src="images/icons/facebook.svg" alt="">
-            </a>
-            <a href="www.facebook.com">
-                <img src="images/icons/facebook.svg" alt="">
-            </a>
-            <a href="www.facebook.com">
-                <img src="images/icons/facebook.svg" alt="">
-            </a>
-            <a href="www.facebook.com">
-                <img src="images/icons/facebook.svg" alt="">
-            </a>
-        </div>
-
+    </div>
+    <div class="secondary-section">
+        <h4 class="mb-4">Who am I ?</h4>
+        <p class="text-center common-max-width">Experienced software UI/UX designer with a creative approach. Skilled in
+            creating prototypes, wireframes, and mockups using Figma, Adobe Illustrator, and Adobe Photoshop. Proficient
+            in developing responsive designs with HTML, CSS, JavaScript, Bootstrap, jQuery, and Angular. Background in
+            VB development, bringing backend thinking, database understanding, and problem-solving skills. Quick learner
+            who thrives in team environments, values collaboration, and seeks knowledge-sharing opportunities. Confident
+            that my innovative ideas and collaborative nature would benefit your company or organization.</p>
+    </div>
+    <div class="primary-section">
+        <h4 class="mb-4">What can I do ?</h4>
         <div class="card-wrapper-row" id="servicesWrapper"></div>
+    </div>
+    <div class='console-container'>
+
     </div>
 
     <script src="main.js"></script>
