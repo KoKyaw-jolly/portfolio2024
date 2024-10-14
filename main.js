@@ -79,12 +79,10 @@ function toggleTheme() {
     cssColorVariableChange(themesColor.light);
     localStorage.setItem("kkkTheme", "light");
     document.getElementById("themeIcon").innerHTML = '<i class="fi fi-rr-moon-stars"></i>';
-    // profileVideoSrc('light');
   } else {
     cssColorVariableChange(themesColor.dark);
     localStorage.setItem("kkkTheme", "dark");
     document.getElementById("themeIcon").innerHTML = '<i class="fi fi-rr-brightness"></i>';
-    // profileVideoSrc('dark');
   }
 }
 
