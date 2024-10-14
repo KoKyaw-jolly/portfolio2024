@@ -86,13 +86,13 @@ function toggleTheme() {
   }
 }
 
-function profileVideoSrc(mode) {
-  if(mode=='dark'){
-    document.getElementById("profileVideo").src = "videos/profile-video-dark.mp4";
-  }else{
-    document.getElementById("profileVideo").src = "videos/profile-video-light.mp4";
-  }
-}
+// function profileVideoSrc(mode) {
+//   if(mode=='dark'){
+//     document.getElementById("profileVideo").src = "videos/profile-video-dark.mp4";
+//   }else{
+//     document.getElementById("profileVideo").src = "videos/profile-video-light.mp4";
+//   }
+// }
 
 function cssColorVariableChange(themeColor) {
   for (let color of themeColor) {
