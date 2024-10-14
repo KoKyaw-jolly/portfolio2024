@@ -27,7 +27,7 @@ body {
   align-items: center;
   min-width: 100%;
   min-height: 100vh;
-  padding: 100px 0;
+  padding: 70px 0;
   /* padding-bottom: 100px; */
 }
 
@@ -47,9 +47,10 @@ body {
 /* theme */
 .theme-icon {
   display: inline-block;
-  position: sticky;
+  position: absolute;
   top: 50px;
-  left: calc(100vw - 80px);
+  right: 50px;
+  /* left: calc(100vw - 80px); */
   font-size: 30px;
   cursor: pointer;
 }
@@ -107,6 +108,7 @@ body {
   font-size: 18px;
   text-align: center;
   margin-top: 15px;
+  margin-bottom: 30px;
   padding: 0 50px;
 }
 
@@ -151,4 +153,72 @@ body {
   display: inline-block;
   width: 150px;
   font-weight: 600;
+}
+.contact-wrapper p{
+  margin-bottom: 0;
+}
+
+@media (max-width: 610px) {
+  p{
+    font-size: 14px;
+  }
+  .secondary-section{
+    padding: 0px 30px 100px 30px;
+  }
+  .theme-icon{
+    top: 30px;
+    right: 30px;
+  }
+  .hero-section .hello-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 42px !important;
+  }
+  .hero-section .hello-carrier {
+    font-size: 26px !important;
+  }
+  .profile-image{
+    width: 200px;
+    height: 200px;
+  }
+  .social-wrapepr{
+    gap: 20px;
+  }
+  .hello-text{
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .contact-title{
+    width: 123px;
+  }
+}
+
+
+@media (max-width: 381px) {
+  p{
+    font-size: 14px;
+  }
+  .hello-text{
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .hero-section .hello-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 38px;
+  }
+  .hero-section .hello-carrier {
+    font-size: 21px;
+  }
+  .profile-image{
+    width: 200px;
+    height: 200px;
+  }
+  .social-wrapepr{
+    gap: 18px;
+  }
+  .social-wrapepr a img{
+    width: 28px;
+    height: 28px;
+  }
 }

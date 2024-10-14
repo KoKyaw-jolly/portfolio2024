@@ -81,3 +81,10 @@
 .portfolio-content-description {
   width: 100%;
 }
+
+
+@media (max-width: 610px) {
+  .card-wrapper{
+    padding: 20px;
+  }
+}
