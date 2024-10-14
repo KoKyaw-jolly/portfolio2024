@@ -9,12 +9,12 @@ addEventListener("load", (event) => {
       cssColorVariableChange(themesColor.dark);
       localStorage.setItem("kkkTheme", "dark");
       document.getElementById("themeIcon").innerHTML = '<i class="fi fi-rr-brightness"></i>';
-      profileVideoSrc('dark');
+      // profileVideoSrc('dark');
     } else {
       cssColorVariableChange(themesColor.light);
       localStorage.setItem("kkkTheme", "light");
       document.getElementById("themeIcon").innerHTML = '<i class="fi fi-rr-moon-stars"></i>';
-      profileVideoSrc('light');
+      // profileVideoSrc('light');
     }
   }
 });
@@ -22,28 +22,28 @@ addEventListener("load", (event) => {
 function initialize() {
   const servicesData = [
     {
-      image: "services/responsive-design.gif",
-      title: "Prototype to HTML with Responsive Design",
-      description:
-        "Seamlessly transform your design prototypes into pixel-perfect, responsive HTML code that looks stunning on any device, ensuring a smooth and engaging user experience across all platforms.",
-    },
-    {
       image: "services/web-developer.gif",
-      title: "Static & Dynamic Web Development",
+      title: "Front-end Web Development",
       description:
         "From sleek and fast-loading static websites to dynamic, interactive interfaces using technologies like Angular, we craft web solutions that captivate and engage your audience.",
-    },
-    {
-      image: "services/css.gif",
-      title: "CSS/SCSS Refactoring & Enhancement",
-      description:
-        "Optimize your existing stylesheets with modern best practices, including design tokens and variables, to ensure a consistent, scalable, and maintainable codebase that enhances your design system's efficiency and flexibility.",
     },
     {
       image: "services/graphic-designer.gif",
       title: "Figma Wireframes & Prototypes",
       description:
         "Bring your ideas to life with interactive and visually compelling prototype designs and wireframes in Figma, providing a clear and engaging blueprint of your project before development begins.",
+    },
+    {
+      image: "services/responsive-design.gif",
+      title: "Prototype to HTML with Responsive Design",
+      description:
+        "Seamlessly transform your design prototypes into pixel-perfect, responsive HTML code that looks stunning on any device, ensuring a smooth and engaging user experience across all platforms.",
+    },
+    {
+      image: "services/css.gif",
+      title: "CSS/SCSS Refactoring & Enhancement",
+      description:
+        "Optimize your existing stylesheets with modern best practices, including design tokens and variables, to ensure a consistent, scalable, and maintainable codebase that enhances your design system's efficiency and flexibility.",
     },
     {
       image: "services/ux-design.gif",
@@ -79,12 +79,12 @@ function toggleTheme() {
     cssColorVariableChange(themesColor.light);
     localStorage.setItem("kkkTheme", "light");
     document.getElementById("themeIcon").innerHTML = '<i class="fi fi-rr-moon-stars"></i>';
-    profileVideoSrc('light');
+    // profileVideoSrc('light');
   } else {
     cssColorVariableChange(themesColor.dark);
     localStorage.setItem("kkkTheme", "dark");
     document.getElementById("themeIcon").innerHTML = '<i class="fi fi-rr-brightness"></i>';
-    profileVideoSrc('dark');
+    // profileVideoSrc('dark');
   }
 }
 
