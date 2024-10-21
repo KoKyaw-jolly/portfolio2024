@@ -96,6 +96,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .card-wrapper {
+    padding: 30px 20px;
+  }
   .portfolio-card img {
     height: 180px;
   }
