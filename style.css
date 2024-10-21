@@ -4,6 +4,7 @@
   --back-color: #24292d;
   --white-color: #fff;
   --black-color: #24292d;
+  --gray-color: #757c83;
 }
 
 * {
@@ -45,7 +46,7 @@ body {
 }
 
 /* theme */
-.theme-icon {
+.theme-icon,.back-icon {
   display: inline-block;
   position: absolute;
   top: 50px;
@@ -54,6 +55,14 @@ body {
   font-size: 30px;
   cursor: pointer;
 }
+
+.back-icon{
+  left: 50px;
+  text-decoration: none;
+  color: var(--fore-color);
+  width: max-content;
+}
+
 .profile-video {
   height: 300px;
   margin-top: 100px;
@@ -165,7 +174,7 @@ body {
   .secondary-section{
     padding: 0px 30px 100px 30px;
   }
-  .theme-icon{
+  .theme-icon,.back-icon{
     top: 30px;
     right: 30px;
   }
